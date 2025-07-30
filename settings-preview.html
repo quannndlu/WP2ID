@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WP2ID Settings Page Preview</title>
+    <style>
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            max-width: 800px;
+            margin: 0 auto;
+            padding: 20px;
+            background: #f1f1f1;
+        }
+        .wrap {
+            background: white;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+        }
+        .nav-tab-wrapper {
+            border-bottom: 1px solid #ccc;
+            margin-bottom: 20px;
+        }
+        .nav-tab {
+            display: inline-block;
+            padding: 8px 12px;
+            text-decoration: none;
+            color: #0073aa;
+            border: 1px solid transparent;
+            margin-right: 5px;
+        }
+        .nav-tab-active {
+            background: white;
+            border: 1px solid #ccc;
+            border-bottom: 1px solid white;
+            color: #000;
+        }
+        .form-table {
+            width: 100%;
+        }
+        .form-table th {
+            text-align: left;
+            padding: 20px 10px 20px 0;
+            width: 200px;
+            vertical-align: top;
+        }
+        .form-table td {
+            padding: 15px 10px;
+            vertical-align: top;
+        }
+        .regular-text {
+            width: 300px;
+            padding: 5px;
+        }
+        .description {
+            color: #666;
+            font-size: 13px;
+            margin-top: 5px;
+        }
+        .button {
+            background: #0073aa;
+            color: white;
+            padding: 8px 12px;
+            border: none;
+            border-radius: 3px;
+            cursor: pointer;
+        }
+        .highlight {
+            background: #fff3cd;
+            border: 1px solid #ffeaa7;
+            padding: 10px;
+            border-radius: 3px;
+            margin: 10px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrap">
+        <h1>WP2ID Settings</h1>
+        
+        <h2 class="nav-tab-wrapper">
+            <a href="#" class="nav-tab nav-tab-active">General</a>
+            <a href="#" class="nav-tab">Advanced</a>
+        </h2>
+        
+        <div class="highlight">
+            <strong>✅ Settings Simplified:</strong> WP2ID settings have been streamlined for better usability!
+        </div>
+        
+        <form method="post" action="options.php">
+            <p>Configure the general settings for WP2ID plugin.</p>
+            
+            <table class="form-table">
+                <tr>
+                    <th scope="row">
+                        <label for="wp2id_enable_feature">Enable Feature</label>
+                    </th>
+                    <td>
+                        <input type="checkbox" id="wp2id_enable_feature" name="wp2id_settings[enable_feature]" value="1" />
+                        <p class="description">Enable this feature.</p>
+                    </td>
+                </tr>
+            </table>
+            
+            <p class="submit">
+                <input type="submit" name="submit" id="submit" class="button button-primary" value="Save Changes">
+            </p>
+        </form>
+        
+        <div style="margin-top: 30px; padding: 15px; background: #e7f3ff; border-left: 4px solid #0073aa;">
+            <h3>Settings Information</h3>
+            <p>Additional settings for IDML export and image handling have been removed to simplify the plugin configuration.</p>
+        </div>
+    </div>
+</body>
+</html>
